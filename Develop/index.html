@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,14 +26,121 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <h3>Current Date: </h3>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div class="container" id="timeDiv">
       <!-- Timeblocks go here -->
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">9am</span>
+          </div>
+          <textarea class="form-control past" id="9"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">10am</span>
+          </div>
+          <textarea class="form-control past" id="10"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour ">11am</span>
+          </div>
+          <textarea class="form-control past" id="11"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">12am</span>
+          </div>
+          <textarea class="form-control past" id="12"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">1pm</span>
+          </div>
+          <textarea class="form-control past" id="13"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">2pm</span>
+          </div>
+          <textarea class="form-control past" id="14"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">3pm</span>
+          </div>
+          <textarea class="form-control past" id="15"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">4pm</span>
+          </div>
+          <textarea class="form-control past" id="16"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-10 input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text hour">5pm</span>
+          </div>
+          <textarea class="form-control past" id="17"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">Button</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./Assets/js/script.js"></script>
   </body>
 </html>
