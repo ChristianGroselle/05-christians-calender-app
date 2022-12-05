@@ -1,9 +1,9 @@
+//Initializing query selectors
 const currDayEl = $("#currentDay");
 const saveBtnEl = $('.saveBtn');
 
-
+//Defining an array to base local storage off of, and creating the local storage variable if it does not exist
 let savedData = ["", "", "", "", "", "", "", "", ""];
-
 
 if(localStorage.getItem('savedText')){
     console.log('here');
@@ -18,7 +18,7 @@ function setCurrDate() { //setting the Date in header
     currDayEl.html(currDay);
 }
 
-function updateHour() {
+function updateHour() { //updating the current hour marker and the past/future classes
     let currHour = moment().get().hour();
     for(let i = 9; i<18;i++){
         if(currHour > 8 && currHour < 18){
@@ -40,8 +40,7 @@ function updateHour() {
     }
 }
 
-function saveText() {
-    console.log('saved');
+function saveText() { //saving input text to local storage
     let textEl = $(this).parent().siblings("textarea");
     let selDay = textEl.attr("id") - 9;
 
@@ -52,13 +51,16 @@ function saveText() {
     localStorage.setItem('savedText', JSON.stringify(workingList));
 }  
 
-function updateText() {
+function updateText() { //populating the fields with data stored in local storage
+    let workingList = JSON.parse(localStorage.getItem('savedText'));
+    let textareaEls = $('textarea');
     for(let i = 0; i < 9; i++){
-
+        textareaEls[i].innerText = workingList[i];
     }
 }
-
+//event listiner for the dave buttons
 saveBtnEl.click(saveText);
 
 setCurrDate();
 updateHour();
+updateText();
